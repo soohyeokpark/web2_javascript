@@ -1,30 +1,50 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>web2 js</title>
-        <meta charset="utf-8">
-    </head>
 
-    <body>
-        <h1><a href="index.html">web</a></h1>
+<head>
+    <title>web2 js</title>
+    <meta charset="utf-8">
+</head>
 
-        <input type="button" value="night" onclick="
+<body style="background-color: white;">
+    <h1><a href="index.html">web</a></h1>
+
+    <!--
+    <input type="button" value="night" onclick="
             document.querySelector('body').style.backgroundColor = 'black';
             document.querySelector('body').style.color = 'white';
+            document.getElementById('toggleButton').value = 'day';
         ">
-        <input type="button" value="day" onclick="
+    <input type="button" value="day" onclick="
             document.querySelector('body').style.backgroundColor = 'white';
             document.querySelector('body').style.color = 'black';
+            document.getElementById('toggleButton').value = 'night';
         ">
+    -->
+    <input type="button" value="night" id="toggleButton" onclick="
+        var nowBackgroundColor = window.getComputedStyle(document.body, null).backgroundColor;
+                
+        // bgColor = black -> white
+        if(nowBackgroundColor == 'rgb(0, 0, 0)') {            
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black';
+            this.value = 'night';
+        } else {
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white';
+            this.value = 'day';
+        }
+    ">
 
-        <ol>
-            <li><a href="html.html">html</a></li>
-            <li><a href="css.html">css</a></li>
-            <li><a href="js.html">js</a></li>
-        </ol>
+    <ol>
+        <li><a href="html.html">html</a></li>
+        <li><a href="css.html">css</a></li>
+        <li><a href="js.html">js</a></li>
+    </ol>
 
-        <h2>web2 js - index</h2>
+    <h2>web2 js - index</h2>
 
-        <p>web2 js - index</p>
-    </body>
+    <p>web2 js - index</p>
+</body>
+
 </html>
