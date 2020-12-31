@@ -22,10 +22,25 @@
         ">
     -->
     <input type="button" value="night" id="toggleButton" onclick="
+        
+        /*
         var nowBackgroundColor = window.getComputedStyle(document.body, null).backgroundColor;
                 
         // bgColor = black -> white
         if(nowBackgroundColor == 'rgb(0, 0, 0)') {            
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'black';
+            this.value = 'night';
+        } else {
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color = 'white';
+            this.value = 'day';
+        }
+        */
+
+        // 
+        var nowButtonValue = document.querySelector('#toggleButton').value;
+        if(nowButtonValue === 'day') {
             document.querySelector('body').style.backgroundColor = 'white';
             document.querySelector('body').style.color = 'black';
             this.value = 'night';
