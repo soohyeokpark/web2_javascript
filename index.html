@@ -9,46 +9,11 @@
 <body style="background-color: white;">
     <h1><a href="index.html">web</a></h1>
 
-    <!--
     <input type="button" value="night" onclick="
-            document.querySelector('body').style.backgroundColor = 'black';
-            document.querySelector('body').style.color = 'white';
-            document.getElementById('toggleButton').value = 'day';
-        ">
-    <input type="button" value="day" onclick="
-            document.querySelector('body').style.backgroundColor = 'white';
-            document.querySelector('body').style.color = 'black';
-            document.getElementById('toggleButton').value = 'night';
-        ">
-    -->
-    <input type="button" value="night" id="toggleButton" onclick="
-        
-        /*
-        var nowBackgroundColor = window.getComputedStyle(document.body, null).backgroundColor;
-                
-        // bgColor = black -> white
-        if(nowBackgroundColor == 'rgb(0, 0, 0)') {            
-            document.querySelector('body').style.backgroundColor = 'white';
-            document.querySelector('body').style.color = 'black';
-            this.value = 'night';
-        } else {
-            document.querySelector('body').style.backgroundColor = 'black';
-            document.querySelector('body').style.color = 'white';
-            this.value = 'day';
-        }
-        */
-
-        // 
-        var nowButtonValue = document.querySelector('#toggleButton').value;
-        if(nowButtonValue === 'day') {
-            document.querySelector('body').style.backgroundColor = 'white';
-            document.querySelector('body').style.color = 'black';
-            this.value = 'night';
-        } else {
-            document.querySelector('body').style.backgroundColor = 'black';
-            document.querySelector('body').style.color = 'white';
-            this.value = 'day';
-        }
+        var element = document.querySelector('body');        
+        element.style.backgroundColor = this.value === 'day' ? 'white' : 'black';
+        element.style.color = this.value === 'day' ? 'black' : 'white';
+        this.value = this.value === 'day' ? 'night' : 'day';
     ">
 
     <ol>
